@@ -33,12 +33,11 @@ def getFAQ(request):
     context = RequestContext(request,{})
     return HttpResponse(template.render(context))
 
-    def getHome(request):
-    template = loader.get_template('index.html')
+#the following is for Chinese version of site
+def getHome(request):
+    template = loader.get_template('index_zh.html')
     context = RequestContext(request,{})
     return HttpResponse(template.render(context))
-
-#the following is for Chinese version of site
 
 def getTestimonialZH(request):
     template = loader.get_template('testimonial_zh.html')
