@@ -32,3 +32,35 @@ def getFAQ(request):
     template = loader.get_template('faq.html')
     context = RequestContext(request,{})
     return HttpResponse(template.render(context))
+
+    def getHome(request):
+    template = loader.get_template('index.html')
+    context = RequestContext(request,{})
+    return HttpResponse(template.render(context))
+
+#the following is for Chinese version of site
+
+def getTestimonialZH(request):
+    template = loader.get_template('testimonial_zh.html')
+    context = RequestContext(request,{})
+    return HttpResponse(template.render(context))
+
+def getWelfareZH(request):
+    template = loader.get_template('welfare_zh.html')
+    context = RequestContext(request,{})
+    return HttpResponse(template.render(context))
+
+def getAboutZH(request):
+    template = loader.get_template('about_zh.html')
+    context = RequestContext(request,{})
+    return HttpResponse(template.render(context))
+
+def getContactZH(request):
+    template = loader.get_template('contact_zh.html')
+    context = RequestContext(request,{})
+    return HttpResponse(template.render(context))
+
+def getFAQZH(request):
+    template = loader.get_template('faq_zh.html')
+    context = RequestContext(request,{})
+    return HttpResponse(template.render(context))

@@ -13,6 +13,14 @@ urlpatterns = patterns('',
     url(r'^aboutus/$', 'EasyAce.views.getAbout', name='about'),
     url(r'^contact/$', 'EasyAce.views.getContact', name='contact'),
     url(r'^faq/$', 'EasyAce.views.getFAQ', name='faq'),
+
+    url(r'^zh/$', 'EasyAce.views.getHomeZH', name='homeZH'),
+    url(r'^zh/testimonial/$', 'EasyAce.views.getTestimonialZH', name='testimonialZH'),
+    url(r'^zh/welfare/$', 'EasyAce.views.getWelfareZH', name='welfareZH'),
+    url(r'^zh/aboutus/$', 'EasyAce.views.getAboutZH', name='aboutZH'),
+    url(r'^zh/contact/$', 'EasyAce.views.getContactZH', name='contactZH'),
+    url(r'^zh/faq/$', 'EasyAce.views.getFAQZH', name='faqZH'),
+
 	url(r'^admin/', include(admin.site.urls)),
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
