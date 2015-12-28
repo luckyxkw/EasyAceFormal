@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>FAQ | Easy Ace</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/skeleton.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/layout.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/flexslider.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/prettyPhoto.css' %}">
+    
+    <!-- CSS
+  ================================================== -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
+<style type="text/css">
+.popup {
+    zoom:1.0;
+    position:relative;
+    text-decoration:none;
+}
+.popup span {
+    position:fixed;
+    top:170px;
+    left:500px;
+    width:350px;
+    padding:0px;
+    border:0px solid #000;
+    border-radius:10px;
+    left:-999em;
+    z-index:990;
+        
+}
+.popup:hover {visibility:visible}
+.popup:hover span {left:350px;}
+* html .popup span {position:absolute;}
+</style>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Favicons    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! THIS PART need to MODIFIED, CREATE NEW ICON!!!!!!!!!!!!
+    ================================================== -->
+       <link rel="shortcut icon" href="{% static 'images/icon.ico' %}">
+    <link rel="apple-touch-icon" href="{% static 'images/c.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'images/b.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'images/a.png' %}">
+
+</head>
+<body>
+
+
+
+    <!-- Primary Page Layout
+    ================================================== -->
+
+    <header id="header" class="site-header" role="banner">
+    <div id="header-inner" class="container sixteen columns over">
+    <hgroup class="one-third column alpha">
+    <h1 id="site-title" class="site-title">
+    <a href="http://www.easyace.sg" id="logo"><img src="{%static 'images/Logo_Easy Ace.jpeg'%}" alt="EasyAce logo" height="140" width="280" /></a>
+    </h1>
+    </hgroup>
+    <nav id="main-nav" class="two thirds column omega">
+    <ul id="main-nav-menu" class="nav-menu">
+        <li id="menu-item-1">
+    <a href="..">Home</a>
+    </li>
+    <li id="menu-item-2">
+    <a href="../aboutus">About us</a>
+    </li>
+    <li id="menu-item-3">
+    <a href="../welfare">Welfare</a>
+    </li>
+    <li id="menu-item-4">
+    <a href="../testimonial">Why us</a>
+    </li>
+    <li id="menu-item-5"   class="current">
+    <a href="../faq">FAQ</a> 
+    </li>
+    <li id="menu-item-6">
+    <a href="../contact">Contact us</a>
+    </li>
+    </ul>
+    </nav>
+    </div>
+    </header>
+    <div class="container">
+<h2>FAQ for Students</h2>
+<h4>1.  Q: How do I obtain tuition service from Easy Ace?</h4>
+ 
+<p>A: You can simply register by completing 
+<a href= "https://docs.google.com/forms/d/1O990xSl-5vQqS3-Od68LLiPKRDvyuqRnLcCKmnstvUM/viewform">Student Registration Form</a>. </p>
+
+<h4>2.  Q: Can I get tuition without filling registration form? </h4>
+<p>A: Yes, you can leave your phone number on our webpage a
+nd we will contact you 
+shortly. </p>
+<h4>3.  Q: How do you charge? </h4>
+<p>A: Please refer to 
+<a class="popup" href ="#">Tuition Rates<span><img src="{%static 'images/fee_rate.png'%}" height = "500"></span></a>.</p>
+<h4>4.  Q: Is there a trial lesson? What if I find the first allocated tutor unsuitable for me? </h4>
+<p>A: 
+Yes
+, there is one trial lesson for each tuition case. If th
+e first tutor allocated is 
+unsuitable for you after the first lesson, we are willin
+g to change the tutor for you. 
+The first lesson conducted will 
+not
+ be charged.  
+However, if you are satisfied with the first tutor and 
+decide to 
+continue
+, the first 
+lesson will be 
+chargeable
+.  </p>
+<h4>5.  Q: What if I find the second allocated tutor still unsuitable for me? </h4>
+<p>A: This is an unlikely situation. However, you can still
+ request to change for another 
+tutor from Easy Ace, but the lesson given by the second tuto
+r remains chargeable.   </p>
+<h4>6.  Q: What is the Feedback Form for? </h4>
+<p>A: Filling a 
+<a href = "https://docs.google.com/forms/d/1EpOj0dK_EDrYEkRjIiWUV9oPSkga0Fs9iivRmwlx0_c/viewform">Feedback Form</a>
+ only takes 
+2 minutes
+. It is an assessment for the lesson 
+you just had.  </p>
+<h4>7.  Q: Why should I fill in the Feedback Form? </h4>
+<p>A:  Feedbacks  will  allow  us  to  improve  our  service 
+for  you
+  and  give  due 
+credit/punishment to your tutor.  
+If you complete the feedbacks for at least one consecutive mo
+nth, 
+vouchers with approximately S$20 value
+ will 
+be awarded. The details of the vouchers are shown in the <a href = "../welfare">Welfare</a>.  </p>
+<h4>8.  Q: What should I do if I want to reschedule, cancel or add a tuition session? </h4>
+<p>A: Student can settle with his or her own tutor. But
+ within the first month, you must 
+acknowledge us
+ through email or phone call for any cancellation or a
+ddition of 
+lesson.  </p>
+<h4>9.  Q: How do I contact Easy Ace to get further assistance? </h4>
+<p>A:  Student  can  email  us  at 
+<a href="mailto:tuition@easyace.sg">tuition@easyace.sg</a>
+,  or  directly  contact  our  Student 
+Manager at 82654707.  </p>
+<hr>
+
+<ul>
+    <h2>FAQ for Tutors</h2>
+<li> <h4> 1. Q: Who are we?</h4>
+
+<p>A: We are a dedicated service provider who aims to lead and revolutionize 
+
+the tuition industry. </p></li>
+
+<li><h4>2. Q: Why are we reliable?</h4>
+
+<p>A: We are a legal business entity registered with ACRA.</p></li>
+
+<li><h4>3. Q: How do we charge?</h4>
+
+<p>A: We charge 50% of the tuition fee for the first month only.</p></li>
+<li><h4>4. Q: I am new to tuition and I have no experience in teaching, can I 
+
+become a tutor?</h4>
+
+<p>A: Yes. If you want, we can provide you with some rookie’s training before 
+
+the start of your tuition.</p></li>
+
+<li><h4>5. Q: What qualification(s) do I need to become a tutor in Easy Ace 
+
+Tuition?</h4>
+
+<p>A: You have to possess at least the ‘O’ level or equivalent certification for 
+
+academic tuition or relevant certification for other field of teaching. E.g., 
+
+musical certification.</p></li>
+
+<li><h4>6. Q: How do I gain higher priority in student allocation? </h4>
+
+<p>
+    <div>- Be mobile;</div>
+
+<div>- Be able to teach subjects which fewer tutors can teach such as 
+
+Economics, English, Biology and Chemistry;</div>
+
+<div>- Contribute to our Teaching Material Reservoir;</div>
+
+<div>- Fill in every Teaching Record;</div>
+
+<div>- Receive positive feedback from students.</div></p></li>
+
+<li><h4>7. Q: Do I need to prepare the teaching materials by myself?</h4>
+
+<p>A: Not necessarily. We will try our best to support you with all the materials 
+
+we have to ease your preparation. In exchange, you are strongly encouraged 
+
+to enrich our common Teaching Material Reservoir with your material and 
+
+you will be ranked higher in the student allocation. </p></li>
+
+<li><h4>8. Q: Is there a trial lesson? Will I be paid for the trial lesson? </h4>
+
+<p>A: Yes, there is one trial lesson for each tuition case. If the student finds the 
+
+first allocated tutor unsuitable after the first lesson, we are willing to change 
+
+the tutor for him. The first lesson conducted will not be charged. 
+
+However, if the student is satisfied with the first tutor and decide to 
+
+continue, the first lesson will be chargeable.</p></li>
+<li><h4>9. What is Star Rating System?</h4>
+
+<p>This system is used to evaluate tutors’ teaching ability.
+<div><img src = "{%static 'images/tutor_star.png'%}" /></div></p></li>
+<li><h4>10. Why do we have Star Rating System?</h4>
+
+<p>This system is designed to reward better tutors. If you earn higher Star 
+
+Rating, you will 
+
+<div>a) gain priority to display your name in the front of the tutor list on our 
+
+website; </div>
+
+<div>b) be able to ask for higher price;</div>
+
+<div>c) have higher chance to teach group tuitions, thus earning higher income.</div></p></li>
+
+<li><h4>11. Q: How likely will you assign me with a new student?</h4>
+
+<p>A: As we only admit the tutors who pass the pre-teaching screening, you will 
+
+be more likely to be assigned a student compared to other agencies once we 
+
+admit you. </p></li>
+
+<li><h4>12. Q: Must I fill in the teaching record each time after the lesson?</h4>
+
+<p>A: Yes. Filling one Teaching Record takes roughly 30 seconds or less. It helps 
+
+you track your teaching experience and more importantly, you can earn 
+
+higher priority in the next student allocation.</p> </li>
+
+<li><h4>13. Q: Will Easy Ace change my student without my permission?</h4>
+
+<p>A: No. We will never change your student without your permission or any 
+
+valid reason.</p></li>
+<li><h4>14. Q: Will I earn more profits than working for other tuition centers?</h4>
+
+<p>A: Yes, if you are loyal. As you continue to teach at Easy Ace, your Star 
+
+Rating increases, your price will generally increase. You can even have 
+
+higher chance to teach group tuitions, thus earning higher income. </p></li>
+
+<li><h4>15. Q: How will I receive my payment(s)?</h4>
+
+<p>A: You should collect the tuition fee from the students by yourself. However, 
+
+you must pay us the amount stated on the contract which will be signed 
+
+right after assignment.</p></li>
+
+<li><h4>16. Q: How do I pay Easy Ace?</h4>
+
+<p>A: Please contact the Tutor Manager and She/he will give you the bank 
+
+account.</p></li>
+<li><h4>17. Q: Can I reschedule lessons? Is there a penalty for rescheduling?</h4>
+
+<p>A: Yes and yes. You should directly inform the Tutor Manager assigned to 
+
+you and your tutee at least 3 days in advance for cancellation/rescheduling/ 
+
+addition of lesson so that we can arrange to minimise the loss to the student. 
+
+Late informing will adversely affect your star rating and thus your pay. </p></li>
+
+<li><h4>18. Q: What will happen if I have to cancel the tuition within the 1th 
+
+month?  </h4>
+
+<p>A: This is strongly discouraged. During the contract period, if you cancel the 
+
+tuition upon agreement with the student, you will only need to pay half the 
+
+amount of the money you have earned for the tuition sessions. However, if 
+
+you cancel the tuition without the permission of the student, you will have 
+
+to pay the full amount as stated in the tutor’s contract.</p></li>
+    </ul>
+</div>
+
+    <br><br>
+<br><br><br><br><br><br>
+<footer>
+
+<div class="footer-inner container">
+<div class="social footer-columns one-second column">
+<h2><i class="icon-bullhorn icon-large"></i> Get Social</h2>
+
+<a href="https://www.linkedin.com/company/easy-ace-pte-ltd?trk=top_nav_home" class = "three columns main-content"><i class="icon-linkedin-sign icon-large"></i> LinkedIn</a>
+
+</div>
+</div>
+
+<div id="footer-base">
+<div class="container">
+<div class="eight columns">
+Copyright &copy; 2015 Easy Ace Pte. Ltd.
+</div>
+</div>
+</div>
+
+</footer>
+
+<!-- End Document
+================================================== -->
+
+<script src="js/jquery.prettyPhoto.js"></script>
+</body>
+</html>
+

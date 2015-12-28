@@ -8,7 +8,7 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>Home | Easy Ace</title>
+	<title>Contact us | Easy Ace</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -30,22 +30,32 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
     <script src="{% static 'js/scripts.js' %}"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
     <script>
-    function myFunction() {
-        window.open("https://docs.google.com/forms/d/1O990xSl-5vQqS3-Od68LLiPKRDvyuqRnLcCKmnstvUM/viewform?c=0&w=1");
+    function initialize() {
+        var myLatLng = {lat:1.33002, lng:103.95123};
+        var mapProp = {
+            center:myLatLng,
+            zoom:15,
+            mapTypeId:google.maps.MapTypeId.ROADMAP
+        };
+        var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        var marker=new google.maps.Marker({
+            position:myLatLng,
+        });
+
+        marker.setMap(map);
     }
-    function yourFunction() {
-        window.open("https://docs.google.com/forms/d/1lOQMvwsigOUKfjFWL9vWC_L9OCsMQBxfNOYKPfOUymQ/viewform?c=0&w=1");
-    }
+    google.maps.event.addDomListener(window, 'load', initialize);
     </script>
-    
+
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
     <!-- Favicons    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! THIS PART need to MODIFIED, CREATE NEW ICON!!!!!!!!!!!!
     ================================================== -->
-    <link rel="shortcut icon" href="{% static 'images/icon.ico' %}">
+       <link rel="shortcut icon" href="{% static 'images/icon.ico' %}">
     <link rel="apple-touch-icon" href="{% static 'images/c.png' %}">
     <link rel="apple-touch-icon" sizes="72x72" href="{% static 'images/b.png' %}">
     <link rel="apple-touch-icon" sizes="114x114" href="{% static 'images/a.png' %}">
@@ -65,10 +75,9 @@
     <a href="http://www.easyace.sg" id="logo"><img src="{%static 'images/Logo_Easy Ace.jpeg'%}" alt="EasyAce logo" height="140" width="280" /></a>
     </h1>
     </hgroup>
-    <a href="http://www.easyace.sg/zh">简体中文</a>
     <nav id="main-nav" class="two thirds column omega">
     <ul id="main-nav-menu" class="nav-menu">
-    <li id="menu-item-1" class="current">
+        <li id="menu-item-1">
     <a href="..">Home</a>
     </li>
     <li id="menu-item-2">
@@ -83,7 +92,7 @@
     <li id="menu-item-5">
     <a href="../faq">FAQ</a> 
     </li>
-    <li id="menu-item-6">
+    <li id="menu-item-6"   class="current">
     <a href="../contact">Contact us</a>
     </li>
     </ul>
@@ -92,37 +101,22 @@
     </header>
 
 	<div class="container">
-            <div class="sixteen columns">
-                <div align = "left">
-                    <font size="4" color="#33733B">The future education. The only thing that's changed is everything.</font>
-                    <a class="myButton" id = "stureg">Student Register</a>
-                    <script>
-                    document.getElementById("stureg").addEventListener("click", myFunction)
-                    </script>
-		    &nbsp
-		    <a class="myButton" id= "tutreg">Tutor Register</a>
-		    <script>
-                    document.getElementById("tutreg").addEventListener("click", yourFunction)
-                    </script>                
-		</div>
-            </div>
-        <div class="sixteen columns">
-            <br></br>
-            <div class="flex-container">
-                <div class="flexslider">
-                <ul class="slides">
-                <li>
-                    <a href="#"><img src="{%static 'images/HomePage/images_1.jpg'%}"/></a>
-                    <div class="flex-caption">
-				        <h5><a href="#">Easy Ace</a></h5>
-		                <p>Your best choice ever!</p>		
-	               </div>
-                </li>
-                </ul>
-            </div>
+        <div class="eight columns main-content">
+        <address>
+            <h2>Contact us via</h2>
+            <p>Telephone: +65 9821 9678</p>
+            <p>E-mail: <a href="mailto:tuition@easyace.sg">tuition@easyace.sg</a></p>
+            <p>Location:</p>
+            <p>Upper Changi Road East Summer Gardens</p>
+            <p>Singapore 486163</p> 
+        </address> 
         </div>
+        <div class= "eight columns main-content"> 
+            <div id="googleMap" style="width:500px;height:380px;"></div>
+        </div>   
     </div>
-</div>
+    <br><br>
+<br><br><br><br><br><br><br><br><br><br>
 <footer>
 
 <div class="footer-inner container">
