@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Our Tutors | Easy Ace</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+    {% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'stylesheets/base.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'stylesheets/skeleton.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'stylesheets/layout.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/flexslider.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/prettyPhoto.css' %}">
+    
+    <!-- CSS
+  ================================================== -->
+ 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+    <script src="{% static 'js/scripts.js' %}"></script>
+    <script>
+    function myFunction() {
+
+        var len = document.form.check.length;
+        var str = "";
+        for (var i=0; i < len; i++)
+        {
+            str .=document.form.check[0].value+",";
+        }
+        document.form.action = str;
+        document.form.submit();
+        //window.location.replace(str);
+    }
+    </script>
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! THIS PART need to MODIFIED, CREATE NEW ICON!!!!!!!!!!!!
+	================================================== -->
+	<link rel="shortcut icon" href="{% static 'images/icon.ico' %}">
+    <link rel="apple-touch-icon" href="{% static 'images/c.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'images/b.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'images/a.png' %}">
+
+</head>
+<body>
+
+
+
+	<!-- Primary Page Layout
+	================================================== -->
+	<header id="header" class="site-header" role="banner">
+    <div id="header-inner" class="container sixteen columns over">
+    <hgroup class="one-third column alpha">
+    <h1 id="site-title" class="site-title">
+    <a href="index.html" id="logo"><img src="{%static 'images/Logo_Easy Ace.jpeg'%}" alt="EasyAce logo" height="140" width="280" /></a>
+    </h1>
+    </hgroup>
+    <nav id="main-nav" class="two thirds column omega">
+    <ul id="main-nav-menu" class="nav-menu">
+        <li id="menu-item-1">
+            <a href="..">Home</a>
+        </li>
+        <li id="menu-item-2">
+            <a href="../aboutus">About us</a>
+        </li>
+        <li id="menu-item-3" class="current">
+            <a href="../tutor">Our Tutors</a>
+        </li>
+        <li id="menu-item-4">
+            <a href="../welfare">Welfare</a>
+        </li>
+        <li id="menu-item-5">
+            <a href="../testimonial">Why us</a>
+        </li>
+        <li id="menu-item-6">
+            <a href="../contact">Contact us</a>
+        </li>
+    </ul>
+    </nav>
+    </div>
+    </header>
+    <div class="container">
+        <div class = "sixten columns">
+    <div><form>
+    <div class= "three columns">Subject:</div>
+    <div class= "three columns"><input type="checkbox" name="subject" value="ma">Math</div>
+    <div class= "three columns"><input type="checkbox" name="subject" value="ch">Chinese</div>
+    <div class= "three columns"><input type="checkbox" name="subject" value="en">General Paper</div>
+    <div class= "three columns"><input type="checkbox" name="subject" value="ph">Physics</div>
+    </form></div>
+
+    <div><form>
+        <div class= "three columns">    Gender:</div>
+
+        <div class= "three columns"><input type="checkbox" name="gender" value = "m">Male</div>
+        <div class= "nine columns"><input type="checkbox" name="gender" value = "f">Female</div>
+    </form> </div>
+
+    <div><form>
+        <div class= "three columns">    Region:</div>
+
+    <div class= "three columns"><input type="checkbox" name="region" value = "c">Central</div>
+    <div class= "three columns"><input type="checkbox" name="region" value = "e">East</div>
+    <div class= "three columns"><input type="checkbox" name="region" value = "n">North</div>
+    <div class= "three columns"><input type="checkbox" name="region" value = "w">West</div>
+    </form> </div>
+
+    <div><form>
+        <div class= "three columns">    Education Background:</div>
+
+    <div class= "three columns"><input type="checkbox" name="education" value="j">Junior College</div>
+    <div class= "three columns"><input type="checkbox" name="education" value="p">Polytechnic</div>
+    <div class= "six columns"><input type="checkbox" name="education" value="u">University</div>
+    </form></div>
+    </div>
+    <br>    <br>    <br>    <br>    <br>    <br>
+    &nbsp&nbsp&nbsp&nbsp&nbsp<a class="myButtonSmall" id = "myBtn">Search</a>
+    <script>
+        document.getElementById("myBtn").addEventListener("click", myFunction)
+    </script>
+    <br><br>
+    {% if tutors %}
+        <ul>
+            {% for Tutor in tutors %}
+            <li>
+                                <hr>
+               <div class="container">
+                <article class="four columns main-content">
+                    <img src="../media/{{ Tutor.photo.url }}" height = "200">
+                    <br>&nbsp
+                </article>
+                <article class="six columns main-content">
+                    <p><strong>Name:</strong> {{ Tutor.name}}</p>
+                    <p><strong>Gender:</strong> {{ Tutor.get_gender_display}}</p>
+                    <p><strong>{{Tutor.get_type_display}}&nbspTutor</strong></p>
+                    <p><strong>Region:</strong> {{ Tutor.get_region_display}}</p>
+                </article>
+                <article class="six columns main-content">
+                    <p><strong>Education: </strong><br>
+                            {%for edu in Tutor.education.all%}
+                            &nbsp&nbsp&nbsp{{edu.get_level_display}}<br>
+                            {%endfor%}
+                    </p>
+                    <p><strong>Subject: </strong><br>
+                            {%for sb in Tutor.subject_teach.all %}
+                            &nbsp&nbsp&nbsp{{sb.get_level_display}}&nbsp{{sb.title}}<br>
+                            {%endfor%}
+                    </p>
+                </article>
+                </div>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No tutors are available</p>
+    {% endif %}
+    </div>
+<footer>
+
+<div class="footer-inner container">
+<div class="social footer-columns one-second column">
+<h2><i class="icon-bullhorn icon-large"></i> Get Social</h2>
+
+<a href="https://www.linkedin.com/company/easy-ace-pte-ltd?trk=top_nav_home" class = "three columns main-content"><i class="icon-linkedin-sign icon-large"></i> LinkedIn</a>
+
+</div>
+</div>
+
+<div id="footer-base">
+<div class="container">
+<div class="eight columns">
+Copyright &copy; 2015 Easy Ace Pte. Ltd.
+</div>
+</div>
+</div>
+
+</footer>
+
+<!-- End Document
+================================================== -->
+
+<script src="js/jquery.prettyPhoto.js"></script>
+</body>
+</html>
+
