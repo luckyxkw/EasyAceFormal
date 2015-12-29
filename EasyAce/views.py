@@ -34,7 +34,7 @@ def getFAQ(request):
     return HttpResponse(template.render(context))
 
 #the following is for Chinese version of site
-def getHome(request):
+def getHomeZH(request):
     template = loader.get_template('index_zh.html')
     context = RequestContext(request,{})
     return HttpResponse(template.render(context))
