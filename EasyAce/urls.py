@@ -19,7 +19,7 @@ urlpatterns = patterns('',
     url(r'^zh/aboutus/$', 'EasyAce.views.getAboutZH', name='aboutZH'),
     url(r'^zh/contact/$', 'EasyAce.views.getContactZH', name='contactZH'),
     url(r'^zh/faq/$', 'EasyAce.views.getFAQZH', name='faqZH'),
-	url(r'^admin/', include(admin.site.urls)),
+	url(r'^admin/$', include(admin.site.urls)),
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
