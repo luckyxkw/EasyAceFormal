@@ -39,7 +39,7 @@ def getHomeZH(request):
     context = RequestContext(request,{})
     return HttpResponse(template.render(context))
 
-def getTestimonialZH(request):
+def getTestimonialZ(request):
     template = loader.get_template('testimonial_zh.html')
     context = RequestContext(request,{})
     return HttpResponse(template.render(context))
