@@ -30,7 +30,14 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
     <script src="{% static 'js/scripts.js' %}"></script>
-
+    <script>
+    function myFunction() {
+        window.open("https://docs.google.com/forms/d/1O990xSl-5vQqS3-Od68LLiPKRDvyuqRnLcCKmnstvUM/viewform?c=0&w=1");
+    }
+    function yourFunction() {
+        window.open("https://docs.google.com/forms/d/1lOQMvwsigOUKfjFWL9vWC_L9OCsMQBxfNOYKPfOUymQ/viewform?c=0&w=1");
+    }
+    </script>
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -88,6 +95,13 @@
     
         <article class="sixteen columns main-content">
         <h2> What Makes Easy Ace Your Best Choice as a Student!</h2>
+        <div align = "left">
+                <font size="4" color="#33733B">The future education. The only thing that's changed is everything.</font>
+                <a class="myButton" id = "stureg">Student Register</a>
+                <script>
+                    document.getElementById("stureg").addEventListener("click",myFunction)
+                </script>
+        </div>
         <h4>Belief in Our Core Values</h4>
 
 <p>passion, integrity, accountability, and professionalism.</p>
